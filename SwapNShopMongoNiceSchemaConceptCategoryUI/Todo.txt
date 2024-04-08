@@ -1,0 +1,9 @@
+Create a modal for sign up rather than taking to a different url
+
+Update Post api
+
+Chat
+
+Search Functionality based on Location
+
+Form validation
