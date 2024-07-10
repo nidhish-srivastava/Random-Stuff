@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap');
+:root {
+  font-family: "Poppins",sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  box-sizing: border-box;
+  --primary-color : rgb(45, 236, 24);
+  --dark-mode-color : rgb(24, 22, 22)
+}
+
+button{
+  cursor: pointer;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgba(237, 237, 237, 0.651)
+}
+
+.main-container{
+  height: 100vh;
+}
+
+.dark-mode{
+  color: white;
+  background-color: var(--dark-mode-color);
+}
+/* NAVBAR */
+
+.navbar{
+  display: flex;
+  padding: 1rem 4rem;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Montserrat",sans-serif;
+}
+
+.logo{
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.heading-highlight{
+  color: var(--primary-color);
+}
+
+.logo .f{
+  color: var(--primary-color);
+}
+
+.logo .r{
+  color: black;
+}
+
+.nav-links{
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a{
+  font-weight: 600;
+  font-size: .9rem;
+  text-decoration: none;
+  color: inherit;
+  opacity: .7;
+}
+
+.nav-links a.active{
+  color: red;
+}
+
+.waitlist-btn{
+   border: 3px solid var(--primary-color);
+   color: var(--primary-color);
+   padding: .5rem 1rem;
+   background-color: white;
+   font-weight: 600;
+   border-radius: 1rem;
+}
+
+
+.dark-mode .logo .r {
+  color: white; /* Color change for "Lancer" span */
+}
+
+.dark-mode .waitlist-btn {
+  background-color: var(--dark-mode-color ); /* Background color change for button */
+}
+
+.dark-mode .waitlist-container{
+  background-color: rgb(23, 21, 28);
+}
+
+/* <-----       ---> */
+
+/* HERO Section */
+
+.hero_container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1; /* Ensure hero container is above the grid */
+  padding: 2rem;
+  margin-top: 5rem;
+}
+
+.hero_container h1{
+  font-size: 3.3rem;
+  text-align: center;
+}
+
+.hero_container h2{
+  font-weight: 500;
+}
+
+.hero_container p{
+  font-size: 1.1rem;
+  padding-bottom: 1rem;
+  margin: 0;
+}
+
+
+
+
+ .input-bar-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 2rem;
+  padding: .41rem 1rem;
+  border: .1px solid rgba(0,0,0,0.3);
+  width: 24%;
+  position: relative;
+  z-index: 100;
+  left: 37%;
+  bottom: 40px;
+}
+
+.input-bar-container input{
+  border: none;
+  outline: none;
+  font-size: 1.03rem;
+}
+
+.input-bar-container button{
+  background-color: rgb(237, 237, 52);
+  padding: .5rem 1rem;
+  font-weight: 600;
+  border-radius: 1rem;
+  border: none;
+}
+
+
+/* GRID CSS */
+
+.grid-container {
+  position: absolute;
+  top: 10;
+  left: 0;
+  width: 100%; /* Ensure grid covers the entire viewport */
+  height: 90%; /* Ensure grid covers the entire viewport */
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  z-index: 19;
+}
+
+.grid-container > div {
+  border-top: .0001px solid rgba(0, 0, 0, 0.3);
+  border-left: .4px solid rgb(19, 19, 19,0.2);
+}
+
+/* Define hover effect */
+.grid-container > *:hover {
+  background-color: rgba(45, 236, 24, 0.5); 
+  transition: background-color 0.2s ease; /* Smooth transition */
+}
+
+.dark-mode-grid > div{
+  border-top: .0001px solid rgba(237, 237, 237, 0.251);
+  border-left: .4px solid  rgba(237, 237, 237, 0.151);
+}
+
+.grid-container > * {
+  transition: background-color 0.5s;
+}
+
+/* Define hover effect */
+.grid-container > *:hover {
+  background-color: rgba(45, 236, 24, 0.5); 
+}
+
+/* Trailing hover effect */
+.grid-container > *:not(:hover) {
+  background-color: inherit; /* Use the default background color for non-hovered elements */
+}
+
+
+/* Toggle Container */
+
+.toggle-container{
+  z-index: 100;
+  position: absolute;
+  top: 160px;
+  left: 44%;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+
+/* TOGGLE SWITCH */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px; /* Reduced width */
+  height: 28px; /* Reduced height */
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 14px; /* Adjusted border-radius */
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px; /* Adjusted height */
+  width: 20px; /* Adjusted width */
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%; /* Rounded shape */
+}
+
+input:checked + .slider {
+  background-color: #000000;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #000000;
+}
+
+input:checked + .slider:before {
+  transform: translateX(24px); /* Adjusted translation */
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 14px; /* Adjusted border-radius */
+}
